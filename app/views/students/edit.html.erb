@@ -1,0 +1,11 @@
+<h1>Update Active Status</h1>
+
+<p>Current Status: <%= @student.active %></p>
+
+<form action="/students/<%= @student.id %>" method="post">
+<input id="hidden" type= "hidden" name="_method" value="patch">
+<label>Update Status to:</label>
+<br>
+<input type="checkbox" name="params[student][active]" value="true"> True</input>
+<input type="checkbox" name="params[student][active]" value="false"> False</input><br><br>
+<input type="submit" name="submit">
