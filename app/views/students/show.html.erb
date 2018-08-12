@@ -1,1 +1,15 @@
 <h1><%= @student.to_s %></h1>
+
+<p><% if @student[:active] %>
+	<%= "This student is currently active." %>
+		<br>
+		<button><a href='<%= "/students/#{@student.id}/activate" %>'>Make Inactive</button>
+	<% else %> 
+	<%= "This student is currently inactive."%>
+		<br>
+		<button><a href='<%= "/students/#{@student.id}/activate" %>'>Make Active</button>
+	<% end %></p>
+
+	<br>
+
+	
