@@ -1,5 +1,14 @@
+<h1>Made it to Student's Page</h1>
 <div>
   <% @students.each do |student| %>
-    <div><%= student.first_name + " " + student.last_name %></div>
+    <p><%=student.active%>
+    <div><%= link_to student.to_s, "/students/#{student.id}"%></div>
   <% end %>
 </div>
+
+<!--
+<link_to "student", "/students/#{student.id}">
+
+<link_to("student", students_path(student.id))>
+<link_to("student", students_path(student))>
+-->
