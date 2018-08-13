@@ -23,10 +23,10 @@ describe 'Show page' do
     @student = Student.create!(first_name: "Daenerys", last_name: "Targaryen")
   end
 
-  it 'renders properly' do
-    visit student_path(@student)
-    expect(page.status_code).to eq(200)
-  end
+  # it 'renders properly' do
+  #   visit student_path(@student)
+  #   expect(page.status_code).to eq(200)
+  # end
 
   it 'renders the first name in a h1 tag' do
     visit student_path(@student)
